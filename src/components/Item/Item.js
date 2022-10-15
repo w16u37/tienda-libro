@@ -1,4 +1,5 @@
-import "../Item/Item.css";
+import "./Item.css";
+import { Link } from "react-router-dom";
 
 export const Item = ({item})=>{
     return(
@@ -6,7 +7,9 @@ export const Item = ({item})=>{
             <img src={item.pictureUrl} alt={item.title}/>
             <h4>{item.title}</h4>
             <p>$ {item.price}</p>
-            <button className="boto-ver">Ver detalle...</button>
+            <Link to={`/item/${item.id}`}>
+                <button className="boton-ver">Ver detalle...</button>
+            </Link>            
         </div>
     )
 }
