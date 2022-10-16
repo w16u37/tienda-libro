@@ -5,8 +5,9 @@ import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 
 export const ItemListContainer = ()=> {
+    console.log(useParams());
     // const categoryName = useParams().categoryName;
-    const {categoryName} = useParams();
+    const {categoryId} = useParams();
 
     const [productos, setProductos] = useState([]);
     
@@ -18,14 +19,14 @@ export const ItemListContainer = ()=> {
 
     useEffect(()=>{
         promesa.then(resultado=>{
-            if(categoryName){
-                const productsFiltered = resultado.filter(elm => elm.categoria === categoryName);
+            if(categoryId){
+                const productsFiltered = resultado.filter(elm => elm.categoria === categoryId);
                 setProductos(productsFiltered);
             } else {
                 setProductos(resultado);
             }            
         })
-    },[categoryName])
+    },[categoryId])
 
     return(
         <div className="item-list-container">

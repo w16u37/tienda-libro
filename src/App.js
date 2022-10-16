@@ -11,16 +11,14 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <div>
-          <NavBar/>
-          {/* <ItemListContainer title="listado" greeting="LISTADO DE LIBROS"/> */}
+          <NavBar/>          
           <Routes>
-            <Route path="/inicio" element={<ItemListContainer/>}/>
-            <Route path="/categoria/:categoryName" element={<ItemListContainer/>}/>
-            <Route path="/niveles/:id" element={<ItemListContainer/>}/>
+            <Route path="/" element={<ItemListContainer/>}/>
+            <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
+            <Route path="/item/:id" element={<ItemListContainer/>}/>
             <Route path="/socios" element={<ItemListContainer/>}/>
             <Route path="/contacto" element={<ContactoPage/>}/>
-          </Routes>
-          <footer>Derechos Reservados</footer>
+          </Routes>          
         </div>
       </div>
     </BrowserRouter>    
