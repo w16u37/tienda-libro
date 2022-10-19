@@ -12,15 +12,15 @@ export const NavBar = ()=>{
             </div>
             <div className='navegacion'>
                 <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 
-                'claseInactiva'} to="/inicio">Inicio</NavLink>
+                'claseInactiva'} to="/">Inicio</NavLink>
                 <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 
-                'claseInactiva'} to="/categorias">Categorias</NavLink>                  
+                'claseInactiva'} to="/category/finanzas">Finanzas</NavLink>                  
                 <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 
-                'claseInactiva'} to="/niveles">Niveles</NavLink>
+                'claseInactiva'} to="/category/gestion">Gestión</NavLink>
                 <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 
-                'claseInactiva'} to="/socios">Socios</NavLink>                
+                'claseInactiva'} to="/category/software">Software</NavLink>                
                 <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 
-                'claseInactiva'} to="/contacto">Sugerencias</NavLink>                                
+                'claseInactiva'} to="/category/informatica">Informática</NavLink>                                
             </div>
             <div>
                 <CartWidget/>
